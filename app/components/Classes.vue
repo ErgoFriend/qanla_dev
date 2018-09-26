@@ -7,16 +7,9 @@
             </StackLayout>
         </DockLayout>
 </template>
-
-<script>
+ <script>
 export default {
-  props: ["id"],
-  methods: {
-    classes() {
-      const myclass = this.$store.getters.subjects;
-      return myclass.id;
-    }
-  }
+  props: ['classes']
 };
 </script>
 <style scoped>
@@ -31,4 +24,3 @@ export default {
   font-size: 11%;
 }
 </style>
-

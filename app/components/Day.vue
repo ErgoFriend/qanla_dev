@@ -1,10 +1,5 @@
 <template>
-    <ListView for="id in classList" width="16.68%">
-        <v-template>
-            <Classes :id="id" />
-        </v-template>
-    </ListView>
-    <!-- <StackLayout width="16.68%">                 
+    <StackLayout width="16.68%">                 
         <DockLayout stretchLastChild="true" height="16.68%">
             <Label dock="left" width="4%" class="color_label" :backgroundColor="day.one.color"/>
             <StackLayout  class="classes">
@@ -21,7 +16,7 @@
         </DockLayout>
         <DockLayout stretchLastChild="true" height="16.68%">
             <Label dock="left" width="4%" class="color_label" :backgroundColor="day.three.color"/>
-            <StackLayout class="classes" @tap="onItemTap(day.three)">
+            <StackLayout class="classes">
                 <Label textWrap="true" class="title" fontWeight="bold" :text="day.three.title"  @itemTap="edit"/>
                 <Label textWrap="true" class="room" :text="day.three.room" />
             </StackLayout>
@@ -47,19 +42,20 @@
                 <Label textWrap="true" class="room" :text="day.six.room" />
             </StackLayout>
         </DockLayout>
-    </StackLayout> -->
+    </StackLayout>
 </template>
-
-<script>
-import Classes from "./Classes";
-
+ <script>
+import Classes from './Classes';
 export default {
   components: [Classes],
-  props: ["day"],
+  props: ['day'],
   methods: {
-    classList() {
-      const thisDay = this.$store.getters.timetable;
-      return thisDay.day;
+    edit() {
+      action('Your message', 'Cancel button text', ['Option1', 'Option2']).then(
+        result => {
+          console.log(result);
+        }
+      );
     }
   }
 };
@@ -80,4 +76,3 @@ export default {
   font-size: 11%;
 }
 </style>
-
