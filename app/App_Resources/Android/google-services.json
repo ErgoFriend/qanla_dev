@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1044929193629",
+    "firebase_url": "https://ergofriend-001.firebaseio.com",
+    "project_id": "ergofriend-001",
+    "storage_bucket": "ergofriend-001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044929193629:android:55e826c023cf0d15",
+        "android_client_info": {
+          "package_name": "org.nativescript.ergofriend001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044929193629-8h31e972p7ite05jdfflrp1gaqaf481m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.nativescript.ergofriend001",
+            "certificate_hash": "4bb3b27f9b3408a9ef0decdfc81ebac17be5837d"
+          }
+        },
+        {
+          "client_id": "1044929193629-vif64su9uon3ov6p8mdoec054hibbmk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ3V4CUA5jwTiLS2mSUqk-yMWutiap6Sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044929193629-vif64su9uon3ov6p8mdoec054hibbmk2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1044929193629-k2tc47tu917pluap64h68lj2iljocnms.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.nativescript.application"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
