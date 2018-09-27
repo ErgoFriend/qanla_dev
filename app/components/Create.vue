@@ -7,17 +7,23 @@
       </GridLayout>
 		</ActionBar>
     <StackLayout>
-        <Label text="科目名" />
-        <TextField :text="textFieldValue" hint="Enter 科目名..." />
-        <Label text="部屋" />
-        <TextField :text="textFieldValue" hint="Enter 部屋..." />
-        <Label text="講師" />
-        <TextField :text="textFieldValue" hint="Enter 講師..." />
+        <DockLayout stretchLastChild="true" >
+          <Label text="科目名" dock="left" width="60" />
+          <TextField :text="textFieldValue" />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="部屋" dock="left" width="60" />
+          <TextField :text="textFieldValue"  />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="講師" dock="left" width="60" />
+          <TextField :text="textFieldValue"  />
+        </DockLayout>
     </StackLayout>
 	</Page>
 </template>
 <script>
-import Subjects from './Subjects';
+import Subjects from "./Subjects";
 
 export default {
   data() {
@@ -38,5 +44,8 @@ ActionBar {
 .title {
   text-align: center;
   padding-right: 30;
+}
+DockLayout {
+  padding: 20;
 }
 </style>

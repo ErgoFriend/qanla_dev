@@ -19,6 +19,7 @@
     "nativescript-theme-core": "^1.0.4",
     "nativescript-ui-sidedrawer": "^4.3.0",
     "nativescript-vue": "^2.0.0-alpha.3",
+    "shortid": "^2.2.13",
     "tns-core-modules": "^4.2.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

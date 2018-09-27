@@ -10,34 +10,35 @@ export default {
         console.log(
           data.loggedIn ? "Logged in to firebase" : "Logged out from firebase"
         );
-        if (data.loggedIn) {
-          // timetableDocument
-          const timetableDocument = firebase.firestore
-            .collection("userData")
-            .doc(data.user.uid);
-          timetableDocument.get().then(doc => {
-            if (doc.exists) {
-              const data = doc.data();
-              store.commit("onTimetableStateChanged", data.timetable);
-            } else {
-              console.log("No such document!");
-            }
-          });
 
-          // classData = {sdfafeas:{name:'ss', room:'3205'},lskslsks:{}}
-          const classData = firebase.firestore
-            .collection("userData")
-            .doc(store.getters.user.uid)
-            .collection("subjects");
-          classData.get().then(querySnapshot => {
-            querySnapshot.forEach(doc => {
-              store.commit("addSubjectsState", {
-                id: doc.id,
-                subject: doc.data()
-              });
-            });
-          });
-        }
+        // if (data.loggedIn) {
+        //   // timetableDocument
+        //   const timetableDocument = firebase.firestore
+        //     .collection("userData")
+        //     .doc(data.user.uid);
+        //   timetableDocument.get().then(doc => {
+        //     if (doc.exists) {
+        //       const data = doc.data();
+        //       store.commit("onTimetableStateChanged", data.timetable);
+        //     } else {
+        //       console.log("No such document!");
+        //     }
+        //   });
+
+        //   // classData = {sdfafeas:{name:'ss', room:'3205'},lskslsks:{}}
+        //   const classData = firebase.firestore
+        //     .collection("userData")
+        //     .doc(store.getters.user.uid)
+        //     .collection("subjects");
+        //   classData.get().then(querySnapshot => {
+        //     querySnapshot.forEach(doc => {
+        //       store.commit("addSubjectsState", {
+        //         id: doc.id,
+        //         subject: doc.data()
+        //       });
+        //     });
+        //   });
+        // }
       }
     });
   },
@@ -58,12 +59,5 @@ export default {
   },
   logout() {
     firebase.logout();
-  },
-  classData(id) {
-    const classData = firebase.firestore
-      .collection("userData")
-      .doc(store.getters.user.uid)
-      .collection("subjects")
-      .doc(id);
   }
 };

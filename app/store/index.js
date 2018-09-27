@@ -6,7 +6,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     user: {},
-    timetable: {},
+    timetable: {
+      time: {},
+      week: {}
+    },
     subjects: {}
   },
   mutations: {
