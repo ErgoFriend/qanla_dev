@@ -1,16 +1,25 @@
-import Vue from "nativescript-vue";
+import Vue from 'nativescript-vue';
 
-import router from "./router";
+import router from './router';
 
-import store from "./store";
+import store from './store';
 
-import "./styles.scss";
+import './styles.scss';
 
-import Firebase from "./firebase";
+import Firebase from './firebase';
 Firebase.init();
 
+Vue.registerElement(
+  'RadSideDrawer',
+  () => require('nativescript-ui-sidedrawer').RadSideDrawer
+);
+Vue.registerElement(
+  'CheckBox',
+  () => require('nativescript-checkbox').CheckBox
+);
+
 // Prints Vue logs when --env.production is *NOT* set while building
-Vue.config.silent = TNS_ENV === "production";
+Vue.config.silent = TNS_ENV === 'production';
 
 new Vue({
   router,

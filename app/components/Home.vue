@@ -27,11 +27,6 @@
 	</Page>
 </template>
 <script>
-require('nativescript-vue').registerElement(
-  'RadSideDrawer',
-  () => require('nativescript-ui-sidedrawer').RadSideDrawer
-);
-
 import Timetable from './Timetable';
 import Subjects from './Subjects';
 import Backup from './Backup';
