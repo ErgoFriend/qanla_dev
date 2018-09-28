@@ -11,7 +11,7 @@
 				<StackLayout ~drawerContent backgroundColor="white">
 					<StackLayout>
 						<Label text="統計" padding="30 10 10" />
-						<Label text="時間割" padding="10" @tap="$navigateTo(Home)" />
+						<Label text="時間割" padding="10" @tap="$refs.drawer.nativeView.closeDrawer()" />
 						<Label text="科目一覧" padding="10" @tap="$navigateTo(Subjects)" />
 						<Label text="時間割設定" padding="30 10 10" />
 						<Label text="通知設定" padding="10" />
