@@ -2,7 +2,9 @@
 	<Page actionBarHidden="false">
     <ActionBar title="Application Settings" flat="true">
       <GridLayout columns="auto, *">
+        <android>
         <Image row="0" col="0" src="~/assets/images/ic_back.png" width="24" verticalAlignment="center" @tap="$navigateTo(Home)" />
+        </android>
         <Label class="title" text="バックアップと復元" row="0" col="1" colSpan="2" />
       </GridLayout>
 		</ActionBar>

@@ -4,7 +4,7 @@
       <GridLayout columns="30, *, 30 ,20">
         <Image row="0" col="0" src="~/assets/images/ic_back.png" width="24" verticalAlignment="center" @tap="$navigateTo(Subjects)" />
         <Label class="title" fontSize="24" text="New subject" row="0" col="1" />
-        <Image row="0" col="2" src="~/assets/images/ic_save2.png" verticalAlignment="center" />
+        <Image ios.position="right" row="0" col="2" src="~/assets/images/ic_save2.png" verticalAlignment="center" />
       </GridLayout>
 		</ActionBar>
     <StackLayout>
