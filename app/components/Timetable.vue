@@ -143,13 +143,7 @@ export default {
 .timetable_top_sat {
   background-color: rgb(79, 90, 153);
 }
-.timetable_time {
-  height: 15%;
-  padding-top: 30%;
-  padding-left: 15%;
-  font-size: 15%;
-  border-right: solid 3px #9b9b9b;
-}
+
 .times {
   text-align: center;
   vertical-align: center;
