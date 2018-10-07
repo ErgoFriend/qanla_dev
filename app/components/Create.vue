@@ -8,6 +8,26 @@
       </GridLayout>
 		</ActionBar>
     <StackLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="科目名" dock="left" width="100"  verticalAlignment="center" />
+          <TextField :text="name" />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="教室" dock="left" width="100" verticalAlignment="center" />
+          <TextField :text="room" />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="教員" dock="left" width="100" verticalAlignment="center"  />
+          <TextField :text="teacher" />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="休める回数" dock="left" width="100" verticalAlignment="center"  />
+          <TextField :text="absentCount" keyboardType="number" />
+        </DockLayout>
+        <DockLayout stretchLastChild="true" >
+          <Label text="補足" dock="left" width="100" verticalAlignment="center"  />
+          <TextView  :text="memo" />
+        </DockLayout>
         <DockLayout stretchLastChild="true" height="15%">
             <Label dock="left" width="100" text="表示例" verticalAlignment="center" />
             <Label class="colorLabel" dock="left" width="5%" :backgroundColor="color"/>
@@ -38,26 +58,6 @@
               <Label class="colorLabel" width="21" height="21" backgroundColor="#DDDDDD" @tap="selectColor('#DDDDDD')"/>
               <Label class="colorLabel" width="21" height="21" backgroundColor="#000000" @tap="selectColor('#000000')"/>
             </WrapLayout >
-        </DockLayout>
-        <DockLayout stretchLastChild="true" >
-          <Label text="科目名" dock="left" width="100"  verticalAlignment="center" />
-          <TextField :text="name" />
-        </DockLayout>
-        <DockLayout stretchLastChild="true" >
-          <Label text="教室" dock="left" width="100" verticalAlignment="center" />
-          <TextField :text="room" />
-        </DockLayout>
-        <DockLayout stretchLastChild="true" >
-          <Label text="教員" dock="left" width="100" verticalAlignment="center"  />
-          <TextField :text="teacher" />
-        </DockLayout>
-        <DockLayout stretchLastChild="true" >
-          <Label text="休める回数" dock="left" width="100" verticalAlignment="center"  />
-          <TextField :text="absentCount" keyboardType="number" />
-        </DockLayout>
-        <DockLayout stretchLastChild="true" >
-          <Label text="補足" dock="left" width="100" verticalAlignment="center"  />
-          <TextView  :text="memo" />
         </DockLayout>
     </StackLayout>
 	</Page>
@@ -101,6 +101,7 @@ DockLayout {
   padding: 10 40;
 }
 .colorLabel {
+  border-radius: 10;
   margin: 6;
 }
 .classes {

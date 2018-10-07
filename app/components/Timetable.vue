@@ -138,9 +138,10 @@ export default {
   background-color: #5c687c;
   color: white;
   text-align: center;
+  padding-top: 10%;
 }
 .timetable_top_sat {
-  background-color: #4F5A99;
+  background-color: #4f5a99;
 }
 
 .times {
